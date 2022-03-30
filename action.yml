@@ -10,6 +10,15 @@ inputs:
   secret-id:
     description: ''
     required: true
+  sdp-controller-url:
+    description: ''
+    required: true
+  sdp-username:
+    description: ''
+    required: true
+  sdp-password:
+    description: ''
+    required: true
 outputs:
   secret-value:
     description: ''
@@ -17,6 +26,9 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
+    - ${{inputs.sdp-controller-url}}
+    - ${{inputs.sdp-username}}
+    - ${{inputs.sdp-password}}
     - ${{inputs.thycotic-username}}
     - ${{inputs.thycotic-password}}
     - ${{inputs.secret-id}}
