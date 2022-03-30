@@ -1,4 +1,6 @@
 FROM amazonlinux
+RUN yum -y update; yum clean all
+RUN yum -y install systemd; yum clean all;
 RUN  amazon-linux-extras install -y epel && \
      yum install -y https://repo.ius.io/ius-release-el7.rpm && \
      yum install -y dnsmasq python36 python36-pip python36-dbus wget && \
