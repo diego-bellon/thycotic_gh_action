@@ -15,7 +15,8 @@ RUN tee /etc/appgate.conf <<EOF >/dev/null \
     Password = ${INPUT_SDP-PASSWORD} \
     EOF
 RUN cat /etc/appgate.conf
-RUN appgate_service_configurator reload && appgate_service_configurator status
+RUN appgate_service_configurator reload
+RUN appgate_service_configurator status
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod a+x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
