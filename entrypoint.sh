@@ -1,4 +1,4 @@
-#!/bin/zsh -l
+#!/bin/sh -l
 echo "username $1"
 echo "password $2"
 echo "secret-id $3"
