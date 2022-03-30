@@ -19,4 +19,4 @@ runs:
   args:
     - ${{inputs.thycotic-username}}
     - ${{inputs.thycotic-password}}
-    - ${{inputs.thycotic-secret-id}}
+    - ${{inputs.secret-id}}
