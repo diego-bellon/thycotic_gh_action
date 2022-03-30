@@ -7,8 +7,8 @@ ControllerUrl = ${1}
 Username = ${2}
 Password = ${3}
 EOF
-RUN appgate_service_configurator reload && \
-    appgate_service_configurator status
+appgate_service_configurator reload && \
+appgate_service_configurator status
 echo "controllerURL $1"
 echo "username $2"
 echo "password $3"
