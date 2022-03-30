@@ -1,0 +1,22 @@
+name: 'Get Thycotic Secret'
+description: 'Gets a secret from Appgate Thycotic service'
+inputs:
+  thycotic-username:
+    description: ''
+    required: true
+  thycotic-password:
+    description: ''
+    required: true
+  secret-id:
+    description: ''
+    required: true
+outputs:
+  secret-value:
+    description: ''
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{inputs.thycotic-username}}
+    - ${{inputs.thycotic-password}}
+    - ${{inputs.thycotic-secret-id}}
