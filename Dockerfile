@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM ubuntu
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod a+x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
